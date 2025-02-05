@@ -33,7 +33,7 @@ golang.org/x/sys v0.0.0-20220715151400-c0bba94af5f8
 Steps to Run:
 
 # Clone the repository
-git clone https://github.com/your-repo/receipt-processor.git
+https://github.com/debeshASU/go-receipt-processor.git
 cd receipt-processor
 
 # Install dependencies
