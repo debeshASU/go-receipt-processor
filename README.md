@@ -1,10 +1,10 @@
-Receipt Processor API
+# Receipt Processor API
 
-Overview
+# Overview
 
 The Receipt Processor API is a web service that processes receipts and calculates reward points based on predefined rules. The API supports running as a standalone Go application or within a Docker container.
 
-Features
+# Features
 
 Process Receipts: Submit a receipt and receive a unique ID.
 
@@ -14,7 +14,7 @@ In-Memory Storage: The system currently stores data in memory but is designed fo
 
 Scalable Architecture: Built with modular components to easily swap storage methods.
 
-Installation & Running the Application
+# Installation & Running the Application
 
 Running with Go
 
@@ -22,7 +22,7 @@ Prerequisites:
 
 Go 1.23.5 or later must be installed.
 
-Dependencies:
+# Dependencies:
 
 github.com/google/uuid v1.6.0
 
@@ -30,10 +30,11 @@ github.com/sirupsen/logrus v1.9.3
 
 golang.org/x/sys v0.0.0-20220715151400-c0bba94af5f8
 
-Steps to Run:
+# Steps to Run:
 
 # Clone the repository
-https://github.com/debeshASU/go-receipt-processor.git
+git clone https://github.com/debeshASU/go-receipt-processor.git
+
 cd receipt-processor
 
 # Install dependencies
@@ -120,7 +121,7 @@ The application uses logrus for structured logging.
 
 Logs include structured fields such as receipt_id, status, and points.
 
-Future Improvements
+# Future Improvements
 
 Database Integration (PostgreSQL, MongoDB, etc.)
 
