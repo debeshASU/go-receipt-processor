@@ -53,10 +53,10 @@ Docker must be installed and running.
 Steps to Build and Run the Docker Container:
 
 # Build the Docker image
-docker build --platform=linux/amd64 -t receipt-processor .
+docker build --platform=linux/amd64 -t go-receipt-processor .
 
 # Run the container
-docker run -p 8080:8080 receipt-processor
+docker run -p 8080:8080 go-receipt-processor
 
 API Endpoints
 
@@ -67,13 +67,28 @@ Endpoint: POST /receipts/process
 Request Body:
 
 {
-  "retailer": "Target",
+   "retailer": "Target",
   "purchaseDate": "2022-01-01",
   "purchaseTime": "13:01",
   "items": [
-    {"shortDescription": "Mountain Dew 12PK", "price": "6.49"}
+    {
+      "shortDescription": "Mountain Dew 12PK",
+      "price": "6.49"
+    },{
+      "shortDescription": "Emils Cheese Pizza",
+      "price": "12.25"
+    },{
+      "shortDescription": "Knorr Creamy Chicken",
+      "price": "1.26"
+    },{
+      "shortDescription": "Doritos Nacho Cheese",
+      "price": "3.35"
+    },{
+      "shortDescription": "   Klarbrunn 12-PK 12 FL OZ  ",
+      "price": "12.00"
+    }
   ],
-  "total": "6.49"
+  "total": "35.35"
 }
 
 Response:
@@ -89,7 +104,7 @@ Endpoint: GET /receipts/{id}/points
 Response:
 
 {
-  "points": 12
+  "points": 28
 }
 
 Running Tests
